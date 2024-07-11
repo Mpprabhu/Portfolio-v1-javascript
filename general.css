@@ -1,0 +1,114 @@
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Tag designs */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  background-color: #111;
+  color: #eee;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 9.6rem 0;
+}
+
+/* headings */
+.heading {
+  font-size: 5.2rem;
+  line-height: 1.5;
+  /* letter-spacing: -1px; */
+  margin-bottom: 32px;
+}
+
+.subheading {
+  color: #74c0fc;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.second-heading {
+  font-size: 3.2rem;
+  line-height: 1.5;
+  margin-bottom: 9.6rem;
+  color: #eee;
+}
+
+/* Layout Designs */
+.grid {
+  display: grid;
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 9rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid-center {
+  align-items: center;
+}
+
+.row-gap {
+  row-gap: 8rem;
+}
+.third-heading {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  color: #ebebeb;
+}
+/* Other Designs */
+.high-index {
+  position: relative;
+  z-index: 999;
+}
+
+.blob {
+  position: absolute;
+  z-index: 0;
+  opacity: 10%;
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateX(8rem);
+}
+
+.margin-top-correction {
+  margin-top: 1.6rem;
+}

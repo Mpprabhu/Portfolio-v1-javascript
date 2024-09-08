@@ -21,6 +21,7 @@
     <!-- Stylesheets and JS Scripts -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/querries.css" />
     <link rel="icon" href="img/prabhu-logo.png" />
     <link rel="apple-touch-icon" href="img/prabhu-logo.png" />
     <link rel="manifest" href="manifest.webmanifest" />
@@ -41,6 +42,12 @@
           <li><button class="btn-contact">Contact</button></li>
         </ul>
       </nav>
+      <div class="bg-nav-overlay"></div>
+
+      <button class="btn-mobile-nav">
+        <i class="ph ph-list icon-mobile-nav menu-icon"></i>
+        <i class="ph ph-x icon-mobile-nav close-icon"></i>
+      </button>
     </header>
     <main>
       <!-- About Section -->
@@ -49,7 +56,14 @@
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <!-- container and contents -->
-        <div class="grid grid-2-cols high-index">
+        <div class="grid grid-2-cols">
+          <div class="image-box">
+            <img
+              src="img/profilexRemoveBG.png"
+              alt="profile"
+              class="profile-img"
+            />
+          </div>
           <div class="text-box">
             <h1 class="heading">
               Prabhu M P
@@ -81,13 +95,6 @@
                 ><i class="ph ph-linkedin-logo"></i
               ></a>
             </div>
-          </div>
-          <div class="image-box">
-            <img
-              src="img/profilexRemoveBG.png"
-              alt="profile"
-              class="profile-img"
-            />
           </div>
         </div>
       </section>

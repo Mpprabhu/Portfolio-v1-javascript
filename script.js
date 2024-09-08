@@ -74,3 +74,44 @@ document.addEventListener("keydown", function (e) {
 
 // Footer text
 footer.textContent = `Copyright © ${new Date().getFullYear()} by Prabhu M P, This project is used as my personal Portfolio and also as a development project, Best to view my portfolio in desktop`;
+
+// Mobile Navigation
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+// const header = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  header.classList.toggle("nav-open");
+  header.classList.toggle("high-index");
+});
+
+// Smooth Scrolling Animation
+
+const allLinks = document.querySelectorAll(".nav-link");
+console.log(allLinks);
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll Back to Top
+
+    if (href == "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to Other Links
+
+    if (href != "#" && href.startsWith("#")) {
+      const SectionEl = document.querySelector(href);
+      SectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close Mobile Navigation via clicking link
+
+    if (link.classList.contains("nav-link"))
+      header.classList.toggle("nav-open");
+  });
+});

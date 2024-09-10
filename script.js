@@ -81,7 +81,6 @@ const btnNavEl = document.querySelector(".btn-mobile-nav");
 
 btnNavEl.addEventListener("click", function () {
   header.classList.toggle("nav-open");
-  header.classList.toggle("high-index");
 });
 
 // Smooth Scrolling Animation

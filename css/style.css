@@ -7,6 +7,9 @@
   color: #ebebeb;
   height: 9.6rem;
   background-color: #222;
+
+  position: relative;
+  z-index: 1000000;
 }
 
 /* Sticky Navigation */
@@ -448,7 +451,7 @@
   padding: 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 100000;
+  z-index: 10000000;
 }
 .modal-heading {
   font-size: 3.2rem;
@@ -482,7 +485,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 9999;
+  z-index: 9999999;
 }
 
 .options {

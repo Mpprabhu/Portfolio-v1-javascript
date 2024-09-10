@@ -1,6 +1,7 @@
 /* Mobile Layout */
 
 @media (max-width: 34em) {
+  /* General */
   .grid {
     row-gap: 4.8rem;
   }
@@ -26,14 +27,25 @@
   .section {
     padding: 3rem 0rem;
   }
-  .about-section {
-    padding: 2.4rem 4.8rem;
-  }
 
   .heading {
     font-size: 4.8rem;
     text-align: center;
   }
+
+  .second-heading {
+    font-size: 2rem;
+    margin-bottom: 4.8rem;
+  }
+  .third-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
+  /* About Section */
+  .about-section {
+    padding: 2.4rem 4.8rem;
+  }
+
   .designation {
     font-size: 2.4rem;
   }
@@ -56,6 +68,79 @@
     font-size: 1.2rem;
   }
 
+  /* Skills section */
+  .skill-image {
+    width: 75%;
+  }
+  .skill:hover .skill-image {
+    margin-bottom: 4rem;
+    transform: scale(1.05);
+  }
+
+  /* Techstack section */
+  .tech-img-box {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .tech {
+    width: 8rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  /* projects */
+  .step-description {
+    font-size: 1.5rem;
+  }
+  .step-img-box:nth-child(3) {
+    grid-row: 4;
+  }
+  .step-text-box .subheading {
+    font-size: 1.6rem;
+  }
+  .step-img-box:nth-child(7) {
+    grid-row: 8;
+  }
+  .step-img {
+    filter: grayscale(0);
+  }
+  .step-img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Certificates */
+  .slider {
+    width: 100%;
+    height: 30rem;
+  }
+  .slide {
+    height: 30rem;
+  }
+  .slider__btn {
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.8rem;
+  }
+  .dots__dot {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  /* contant modal */
+  .modal {
+    width: 80%;
+    padding: 4rem;
+    margin-bottom: 2.4rem;
+    font-size: 3rem;
+  }
+  .options {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .option-icon {
+    font-size: 3.6rem;
+    padding: 1.4rem;
+  }
   /* /////////////////// */
   /* Mobile Navigation */
   .btn-mobile-nav {

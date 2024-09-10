@@ -39,7 +39,7 @@ const sectionObserver = new IntersectionObserver(revealElement, {
 
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
-  // section.classList.add("section-hidden");
+  section.classList.add("section-hidden");
 });
 
 // Contact Modal
@@ -113,4 +113,8 @@ allLinks.forEach(function (link) {
     if (link.classList.contains("nav-link"))
       header.classList.toggle("nav-open");
   });
+});
+// reloaded to start
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
 });

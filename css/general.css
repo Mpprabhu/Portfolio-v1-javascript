@@ -106,7 +106,7 @@ section {
 
 .section-hidden {
   opacity: 0;
-  transform: translateX(8rem);
+  transform: translateY(5rem);
 }
 
 .margin-top-correction {

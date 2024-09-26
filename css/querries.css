@@ -110,6 +110,9 @@
   .step-img-box:nth-child(7) {
     grid-row: 8;
   }
+  .step-img-box:nth-child(11) {
+    grid-row: 12;
+  }
   .step-img {
     filter: grayscale(0);
   }

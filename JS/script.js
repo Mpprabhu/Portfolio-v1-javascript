@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 const aboutSection = document.querySelector(".about-section");
 const allSections = document.querySelectorAll(".section");
-const footer = (documentSelector = document.querySelector("footer"));
+const footer = document.querySelector("footer");
 
 // Sticky Navigation
 const headerHeight = header.getBoundingClientRect().height;

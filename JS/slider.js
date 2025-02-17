@@ -1,86 +1,85 @@
-// Slider
-const btnRight = document.querySelector(".slider__btn--right");
-const btnLeft = document.querySelector(".slider__btn--left");
-const slidesAll = document.querySelectorAll(".slide");
-const dotContainer = document.querySelector(".dots");
+window.addEventListener("load", () => {
+  const slider = document.querySelector(".slider");
+  if (!slider) return;
 
-const slider = function () {
+  const slides = slider.querySelectorAll(".slide");
+  const btnLeft = slider.querySelector(".slider__btn--left");
+  const btnRight = slider.querySelector(".slider__btn--right");
+  const dotContainer = slider.querySelector(".dots");
   let currentSlide = 0;
-  let maxSlide = slidesAll.length;
+  const maxSlide = slides.length;
 
-  const createDots = function () {
-    slidesAll.forEach(function (_, i) {
+  // Create dots for each slide with the correct class
+  const createDots = () => {
+    slides.forEach((_, i) => {
       dotContainer.insertAdjacentHTML(
         "beforeend",
-        `<button class="dots__dot" data-slide = ${i}></button>`
+        `<button class="dots__dot" data-slide="${i}"></button>`
       );
     });
   };
 
-  const activeDot = function (slide) {
-    document
+  // Update active dot styling
+  const updateDots = (slide) => {
+    dotContainer
       .querySelectorAll(".dots__dot")
       .forEach((dot) => dot.classList.remove("dots__dot--active"));
-
-    document
-      .querySelector(`.dots__dot[data-slide = "${slide}"]`)
+    dotContainer
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
       .classList.add("dots__dot--active");
   };
 
-  const goToSlide = function (slide) {
-    slidesAll.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-    );
+  // Position slides side-by-side and update active dot
+  const goToSlide = (slide) => {
+    slides.forEach((s, i) => {
+      s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
+    updateDots(slide);
   };
 
-  // init
-  const init = function () {
+  // Next slide functionality
+  const nextSlide = () => {
+    currentSlide = currentSlide === maxSlide - 1 ? 0 : currentSlide + 1;
+    goToSlide(currentSlide);
+  };
+
+  // Previous slide functionality
+  const prevSlide = () => {
+    currentSlide = currentSlide === 0 ? maxSlide - 1 : currentSlide - 1;
+    goToSlide(currentSlide);
+  };
+
+  // Auto slide functionality (change slide every 3 seconds)
+  let autoSlideInterval = setInterval(nextSlide, 5000);
+  const resetInterval = () => {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, 5000);
+  };
+
+  // Initialize slider: create dots then position slides
+  const init = () => {
     createDots();
     goToSlide(0);
-    activeDot(0);
   };
   init();
 
-  // functions
-  const nextSlide = function () {
-    if (currentSlide === maxSlide - 1) currentSlide = 0;
-    else {
-      currentSlide++;
-    }
-    goToSlide(currentSlide);
-    activeDot(currentSlide);
-  };
-
-  const prevSlide = function () {
-    if (currentSlide === 0) currentSlide = maxSlide - 1;
-    else {
-      currentSlide--;
-    }
-    goToSlide(currentSlide);
-    activeDot(currentSlide);
-  };
-
-  // Click
-  btnLeft.addEventListener("click", prevSlide);
-  btnRight.addEventListener("click", nextSlide);
-
-  // KeyBoard
-  document.addEventListener("keyup", function (e) {
-    if (e.key === "ArrowLeft") {
-      prevSlide();
-    }
-    if (e.key === "ArrowRight") {
-      nextSlide();
-    }
+  // Event listeners for slider controls
+  btnRight.addEventListener("click", () => {
+    nextSlide();
+    resetInterval();
   });
 
-  // Dots
-  dotContainer.addEventListener("click", function (e) {
+  btnLeft.addEventListener("click", () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  // Event listener for dots navigation using the updated class names
+  dotContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("dots__dot")) {
-      const selectSlide = e.target.dataset.slide;
-      goToSlide(selectSlide);
-      activeDot(selectSlide);
+      currentSlide = Number(e.target.dataset.slide);
+      goToSlide(currentSlide);
+      resetInterval();
     }
   });
-};
-slider();
+});

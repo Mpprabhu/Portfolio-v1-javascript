@@ -136,73 +136,142 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Projects Section
+  // const projects = [
+  //   {
+  //     number: "01",
+  //     title: "Fictional Project for Web Development",
+  //     subheading: "Omnifood — Health AI",
+  //     description:
+  //       "Learned the concepts of Front-end and made a complete project for a fictional company Omnifood, implemented some concepts like Grid and Flexbox for the layout and designed based on respective personalities.",
+  //     image: "projects/omni-food.png",
+  //   },
+  //   {
+  //     number: "02",
+  //     title: "Designed an App for Hackathon",
+  //     subheading: "Hodo — Tourist App",
+  //     description:
+  //       "HODO is an innovative tourist app designed and developed for a hackathon. This project showcases a comprehensive travel solution, user experience, local recommendations, and navigation assistance.",
+  //     image: "projects/hodo.png",
+  //   },
+  //   {
+  //     number: "03",
+  //     title: "Worked & Designed in Hackathon",
+  //     subheading: "Classmaster — Organizer App",
+  //     description:
+  //       "ClassMaster is an organizer app and web platform developed by our team for a hackathon, where I contributed to the web development. It highlights an organization app featuring a centralized view.",
+  //     image: "projects/classmaster.png",
+  //   },
+  //   {
+  //     number: "04",
+  //     title: "JavaScript Development Projects",
+  //     subheading: "Beginner to Advanced",
+  //     description:
+  //       "The fictional projects range from basic exercises, such as DOM manipulation and mini-games, to more advanced applications like an interactive map and bank transactions with the help of courses and YouTube.",
+  //     image: "projects/webProjects.png",
+  //   },
+  //   {
+  //     number: "05",
+  //     title: "Game Development Projects",
+  //     subheading: "Unity Game Mechanisms",
+  //     description:
+  //       "I have developed game mechanisms for both Third-Person Shooter (TPS) and endless runner games in 2D and 3D. This involves key gameplay as player controls, environment interaction, shooting mechanics for TPS.",
+  //     image: "projects/unityProjects.png",
+  //   },
+  //   {
+  //     number: "06",
+  //     title: "Unity AR Project for Hackathon",
+  //     subheading: "EDxAR - AR Domain Winner",
+  //     description:
+  //       "I contributed as a Unity AR Developer in the Innothon 30-hour Hackathon at my college, where our team won - AR Domain Winner. My role involved scripting and developing core logic to ensure app functionality.",
+  //     image: "projects/AR Project.png",
+  //   },
+  // ];
+  // const projectsContainer = document.querySelector(
+  //   ".projects-section .grid-2-cols"
+  // );
+  // if (projectsContainer) {
+  //   projectsContainer.innerHTML = projects
+  //     .map(
+  //       (project) => `
+  //     <div class="step-text-box">
+  //       <p class="step-number">${project.number}</p>
+  //       <h3 class="third-heading">${project.title}</h3>
+  //       <p class="subheading margin-top-correction">${project.subheading}</p>
+  //       <p class="step-description">${project.description}</p>
+  //     </div>
+  //     <div class="step-img-box">
+  //       <img src="${project.image}" alt="${project.subheading}" class="step-img" />
+  //     </div>
+  //   `
+  //     )
+  //     .join("");
+  // }
+
+  // Projects Section – Displayed as Cards
+  // Projects Section – Displayed as Cards (Image on Top)
   const projects = [
     {
-      number: "01",
       title: "Fictional Project for Web Development",
       subheading: "Omnifood — Health AI",
       description:
-        "Learned the concepts of Front-end and made a complete project for a fictional company Omnifood, implemented some concepts like Grid and Flexbox for the layout and designed based on respective personalities.",
+        "Learned the concepts of Front-end and made a complete project for a fictional company Omnifood, implementing Grid and Flexbox layout concepts and designing based on respective personalities.",
       image: "projects/omni-food.png",
     },
     {
-      number: "02",
       title: "Designed an App for Hackathon",
       subheading: "Hodo — Tourist App",
       description:
-        "HODO is an innovative tourist app designed and developed for a hackathon. This project showcases a comprehensive travel solution, user experience, local recommendations, and navigation assistance.",
+        "HODO is an innovative tourist app designed and developed for a hackathon. This project showcases a comprehensive travel solution with an intuitive user experience, local recommendations, and navigation assistance.",
       image: "projects/hodo.png",
     },
     {
-      number: "03",
       title: "Worked & Designed in Hackathon",
       subheading: "Classmaster — Organizer App",
       description:
-        "ClassMaster is an organizer app and web platform developed by our team for a hackathon, where I contributed to the web development. It highlights an organization app featuring a centralized view.",
+        "ClassMaster is an organizer app and web platform developed by our team for a hackathon, highlighting an organization app featuring a centralized view.",
       image: "projects/classmaster.png",
     },
     {
-      number: "04",
       title: "JavaScript Development Projects",
       subheading: "Beginner to Advanced",
       description:
-        "The fictional projects range from basic exercises, such as DOM manipulation and mini-games, to more advanced applications like an interactive map and bank transactions with the help of courses and YouTube.",
+        "A range of fictional projects from basic DOM manipulation exercises to advanced applications like an interactive map and bank transactions.",
       image: "projects/webProjects.png",
     },
     {
-      number: "05",
       title: "Game Development Projects",
       subheading: "Unity Game Mechanisms",
       description:
-        "I have developed game mechanisms for both Third-Person Shooter (TPS) and endless runner games in 2D and 3D. This involves key gameplay as player controls, environment interaction, shooting mechanics for TPS.",
+        "Developed game mechanisms for both Third-Person Shooter (TPS) and endless runner games in 2D and 3D, covering player controls, environment interaction, and shooting mechanics.",
       image: "projects/unityProjects.png",
     },
     {
-      number: "06",
       title: "Unity AR Project for Hackathon",
       subheading: "EDxAR - AR Domain Winner",
       description:
-        "I contributed as a Unity AR Developer in the Innothon 30-hour Hackathon at my college, where our team won - AR Domain Winner. My role involved scripting and developing core logic to ensure app functionality.",
+        "Contributed as a Unity AR Developer in a 30-hour Hackathon at my college, where our team won the AR Domain Winner. My role involved scripting and developing core logic for app functionality.",
       image: "projects/AR Project.png",
     },
   ];
+
   const projectsContainer = document.querySelector(
-    ".projects-section .grid-2-cols"
+    ".projects-section .grid-3-cols"
   );
   if (projectsContainer) {
     projectsContainer.innerHTML = projects
       .map(
         (project) => `
-      <div class="step-text-box">
-        <p class="step-number">${project.number}</p>
-        <h3 class="third-heading">${project.title}</h3>
-        <p class="subheading margin-top-correction">${project.subheading}</p>
-        <p class="step-description">${project.description}</p>
+    <div class="project-card">
+      <div class="project-img-box">
+        <img src="${project.image}" alt="${project.subheading}" class="project-img" />
       </div>
-      <div class="step-img-box">
-        <img src="${project.image}" alt="${project.subheading}" class="step-img" />
+      <div class="project-content">
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-subheading">${project.subheading}</p>
+        <p class="project-description">${project.description}</p>
       </div>
-    `
+    </div>
+  `
       )
       .join("");
   }

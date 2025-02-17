@@ -303,44 +303,76 @@
 }
 
 /* Projects */
-.step-number {
-  font-size: 4.8rem;
-  font-weight: 600;
-  background: linear-gradient(#4dabf7, #228be6);
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 1.2rem;
+.projects-section .grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
 }
 
-.step-description {
-  font-size: 1.8rem;
-  line-height: 1.8;
-  color: #bbb;
-}
-
-.step-img-box {
-  position: relative;
+.project-card {
+  background-color: #2b2b2b;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  height: 400px;
 }
 
-.step-img {
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.464);
+}
+
+.project-img-box {
+  flex: 0 0 50%; /* Upper half of the card */
+  overflow: hidden;
+}
+
+.project-img {
   width: 100%;
-  border-radius: 20px;
-  transition: all 0.4s;
-  filter: grayscale(0.5);
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.5); /* Start in grayscale */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.step-img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #4dabf7;
-  filter: grayscale(0);
+.project-card:hover .project-img {
+  filter: grayscale(0); /* Remove grayscale on hover */
 }
 
-.section-certificates {
-  padding-top: 4.8rem;
+.project-content {
+  flex: 1; /* Lower half of the card */
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.3s ease;
 }
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #4dabf7;
+  margin: 0.5rem 0;
+}
+
+.project-subheading {
+  font-size: 1.6rem;
+  color: #bbb;
+  margin: 0;
+}
+
+.project-description {
+  font-size: 1.4rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
 /* /////////////Slider//////////////////// */
 .slider {
   max-width: 100rem;

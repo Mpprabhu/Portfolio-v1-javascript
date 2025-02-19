@@ -1,0 +1,13 @@
+@import url("variables.css");
+
+footer {
+  margin-top: 4.88rem;
+  padding: 4.8rem;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-footer),
+    var(--color-footer-gradient)
+  );
+}

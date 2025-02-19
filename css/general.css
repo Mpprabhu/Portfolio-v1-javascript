@@ -1,3 +1,13 @@
+:root {
+  --color-bg: #111;
+  --color-text: #eee;
+  --color-subheading: #74c0fc;
+  --color-heading: #ebebeb;
+  --font-base: "Rubik", sans-serif;
+  --font-size-base: 62.5%;
+  --transition-speed: 0.3s;
+}
+
 /* Global Reset */
 * {
   padding: 0;
@@ -6,35 +16,36 @@
   scroll-behavior: smooth;
 }
 
-/* Tag designs */
+/* Base Tags */
 html {
-  font-size: 62.5%;
+  font-size: var(--font-size-base);
   overflow-x: hidden;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: var(--font-base);
   font-weight: 400;
-  background-color: #111;
-  color: #eee;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   line-height: 1;
   overflow-x: hidden;
 }
 
+/* Section Spacing */
 section {
   padding: 9.6rem 0;
 }
 
-/* headings */
+/* Headings */
 .heading {
   font-size: 5.2rem;
   line-height: 1.5;
-  /* letter-spacing: -1px; */
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
+  /* You can adjust letter-spacing if needed */
 }
 
 .subheading {
-  color: #74c0fc;
+  color: var(--color-subheading);
   letter-spacing: 3px;
   font-size: 1.8rem;
   font-weight: 500;
@@ -47,7 +58,14 @@ section {
   font-size: 3.2rem;
   line-height: 1.5;
   margin-bottom: 9.6rem;
-  color: #eee;
+  color: var(--color-text);
+}
+
+.third-heading {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  color: var(--color-heading);
 }
 
 /* Layout Designs */
@@ -82,13 +100,8 @@ section {
 .row-gap {
   row-gap: 8rem;
 }
-.third-heading {
-  font-size: 2.4rem;
-  line-height: 1.2;
-  margin-bottom: 3.2rem;
-  color: #ebebeb;
-}
-/* Other Designs */
+
+/* Other Global Styles */
 .high-index {
   position: relative;
   z-index: 999;

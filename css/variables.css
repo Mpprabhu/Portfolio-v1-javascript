@@ -1,0 +1,31 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #1971c2;
+  --color-primary-light: #339af0;
+  --color-primary-dark: #228be6;
+  --color-secondary: #4dabf7;
+
+  /* Background & Base Colors */
+  --color-bg-dark: #222;
+  --color-bg-footer: #111;
+
+  /* Text Colors */
+  --color-text-light: #ebebeb;
+  --color-text-muted: #bbb;
+
+  /* Shadows and Overlays */
+  --color-box-shadow: rgba(0, 0, 0, 0.3);
+  --color-box-shadow-hover: rgba(77, 171, 247, 0.464);
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Modal */
+  --color-modal-bg: #222;
+
+  /* Footer */
+  --color-footer-gradient: rgba(25, 112, 194, 0.2);
+
+  /* Other */
+  --transition-speed: 0.3s;
+  --transition-speed-slow: 0.5s;
+}

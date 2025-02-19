@@ -22,10 +22,10 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: "Fictional Project for Web Development",
+    title: "Front-End Development Project",
     subheading: "Omnifood — Health AI",
     description:
-      "Learned the concepts of Front-end and made a complete project for a fictional company Omnifood, implementing Grid and Flexbox layout concepts and designing based on respective personalities.",
+      "Learned the concepts of Front-end and made a complete project called Omnifood, implementing Grid and Flexbox layout concepts and designing based on respective personalities.",
     image: "projects/omni-food.png",
   },
   {

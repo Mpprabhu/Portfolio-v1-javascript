@@ -1,4 +1,5 @@
 /* Mobile Layout */
+@import url("variables.css");
 
 @media (max-width: 34em) {
   /* General */
@@ -94,7 +95,7 @@
   }
   .tech:hover {
     transform: translateY(-1rem);
-    box-shadow: 0 0 14px #1971c2;
+    box-shadow: 0 0 14px var(--color-primary);
   }
 
   /* projects */
@@ -161,7 +162,7 @@
   }
 
   .navigation {
-    background-color: #222;
+    background-color: var(--color-bg-dark);
     position: absolute;
     top: 0;
     right: 0;
@@ -187,7 +188,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
+    background-color: var(--color-overlay); /* Darken the background */
     backdrop-filter: blur(5px);
     z-index: 999; /* Lower than navigation but still above content */
     display: none; /* Hidden by default */

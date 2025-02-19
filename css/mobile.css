@@ -1,0 +1,21 @@
+/* Mobile Navigation */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+.bg-nav-overlay {
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 4rem;
+  color: #228be6;
+}
+
+.close-icon {
+  display: none;
+}

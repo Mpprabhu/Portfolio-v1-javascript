@@ -1,0 +1,296 @@
+@import url("variables.css");
+
+/* Tablet Landscape (Below 75em / 1200px) */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* Reduced base font-size */
+  }
+
+  /* Header & Navigation */
+  .header {
+    padding: 0 2.4rem;
+  }
+  .nav-link,
+  .btn-contact {
+    font-size: 1.8rem;
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 4rem 6rem;
+  }
+  .designation {
+    font-size: 3rem;
+  }
+  .about-text {
+    font-size: 1.6rem;
+  }
+
+  /* Projects: Change from a 3-column grid to 2 columns */
+  .projects-section .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .project-card {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  /* Slider Adjustments */
+  .slider {
+    height: 50rem;
+  }
+  .slide {
+    height: 50rem;
+  }
+}
+
+/* Tablet Portrait / Smaller Tablets (Below 59em / 944px) */
+@media (max-width: 59em) {
+  html {
+    font-size: 50%; /* Further reduction */
+  }
+
+  .header {
+    padding: 0 2rem;
+  }
+  .nav-link,
+  .btn-contact {
+    font-size: 1.6rem;
+  }
+
+  .about-section {
+    padding: 3.2rem 4rem;
+  }
+  .designation {
+    font-size: 2.8rem;
+  }
+  .about-text {
+    font-size: 1.4rem;
+  }
+
+  .tech-img-box {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .tech {
+    width: 10rem;
+    padding: 1.35rem;
+    border-radius: 18px;
+    filter: grayscale(0);
+  }
+  .tech:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0 14px var(--color-primary);
+  }
+
+  /* Projects: Keep 2 columns but increase gap */
+  .projects-section .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  .project-card {
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .slider {
+    height: 40rem;
+  }
+  .slide {
+    height: 40rem;
+  }
+}
+
+/* Tablet Smaller (Below 44em / 704px) */
+@media (max-width: 44em) {
+  /* Stack project cards as one column */
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3-cols {
+    gap: 2.4rem;
+  }
+
+  .header {
+    padding: 0rem 2rem;
+  }
+
+  .btn-contact {
+    font-size: 2rem;
+  }
+
+  .blob-2 {
+    top: 70%;
+    left: 85%;
+  }
+
+  .section {
+    padding: 3rem 0rem;
+  }
+
+  .heading {
+    font-size: 5.6rem;
+    text-align: center;
+  }
+
+  .second-heading {
+    font-size: 3.6rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .third-heading {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* About Section */
+  .image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 70%;
+  }
+  .about-section {
+    padding: 4.8rem;
+  }
+
+  .designation {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .link-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-download {
+    padding: 2rem 4rem;
+    width: 40%;
+  }
+
+  .btn-download:hover {
+    letter-spacing: 0px;
+  }
+
+  .download-icon {
+    font-size: 3rem;
+  }
+  .download-resume-link {
+    font-size: 2rem;
+  }
+
+  /* Navigation */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1001; /* Ensure the button is on top of other content */
+  }
+
+  .navigation {
+    background-color: var(--color-bg-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 8rem;
+    margin-right: 4rem;
+    border-radius: 20px;
+    width: 50%;
+    height: 60vh;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    z-index: 1000;
+  }
+
+  /* Background Overlay */
+  .bg-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-overlay); /* Darken the background */
+    backdrop-filter: blur(5px);
+    z-index: 999; /* Lower than navigation but still above content */
+    display: none; /* Hidden by default */
+  }
+
+  .nav-open .bg-nav-overlay {
+    display: block; /* Display overlay when navigation is open */
+  }
+
+  .nav-open .navigation {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    z-index: 1000; /* Ensure navigation is above everything */
+    transform: translateX(0);
+  }
+
+  .nav-open .close-icon {
+    display: block;
+  }
+
+  .nav-open .menu-icon {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-link:after {
+    display: none;
+  }
+
+  .nav-link:visited,
+  .nav-link:link {
+    font-size: 3rem;
+  }
+
+  .skill:hover .skill-image {
+    transform: scale(1.2);
+  }
+
+  .skill:hover .skill-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  .tech {
+    width: 12rem;
+  }
+
+  /* Sticky Navigation Fix */
+  .sticky .header {
+    z-index: 1000;
+  }
+
+  .slider,
+  .section {
+    z-index: 1;
+  }
+}

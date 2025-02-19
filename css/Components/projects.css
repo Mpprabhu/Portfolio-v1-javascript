@@ -1,6 +1,5 @@
 @import url("variables.css");
 
-/* Projects Section - 3 Column Grid */
 .projects-section .grid-3-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -8,7 +7,7 @@
 }
 
 .project-card {
-  background-color: #2b2b2b; /* You can change this to a variable if desired */
+  background-color: #2b2b2b;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0 10px var(--color-box-shadow);
@@ -16,11 +15,11 @@
     box-shadow var(--transition-speed);
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 40rem;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
   box-shadow: 0 0 20px var(--color-box-shadow-hover);
 }
 
@@ -41,6 +40,14 @@
   filter: grayscale(0);
 }
 
+.project-card:hover .project-content::before {
+  transform: translateY(0);
+}
+
+.project-card:hover .project-content {
+  color: var(--color-text-light);
+}
+
 .project-content {
   flex: 1;
   padding: 1rem 1.5rem;
@@ -48,7 +55,23 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
   transition: color var(--transition-speed);
+}
+
+.project-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: var(--color-bg-dark);
+  transform: translateY(100%);
+  transition: transform var(--transition-speed-fast);
+  z-index: -1;
 }
 
 .project-title {

@@ -1,0 +1,268 @@
+/* Mobile Layout */
+@import url("variables.css");
+
+@media (max-width: 34em) {
+  /* General */
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid-2-cols,
+  .grid-3-cols,
+  .grid-4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0rem 2rem;
+  }
+  .btn-contact {
+    font-size: 2rem;
+  }
+
+  .blob-2 {
+    top: 70%;
+    left: 85%;
+  }
+
+  .section {
+    padding: 3rem 0rem;
+  }
+
+  .heading {
+    font-size: 6.4rem;
+    text-align: center;
+  }
+
+  .second-heading {
+    font-size: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .third-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
+  /* About Section */
+  .about-section {
+    padding: 4.8rem;
+  }
+
+  .designation {
+    font-size: 3rem;
+  }
+  .about-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .link-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-download {
+    padding: 2rem 4rem;
+    width: 50%;
+  }
+  .btn-download:hover {
+    letter-spacing: 0px;
+  }
+  .download-icon {
+    font-size: 2rem;
+  }
+  .download-resume-link {
+    font-size: 1.6rem;
+  }
+
+  /* Skills section */
+  .skill-image {
+    width: 60%;
+  }
+
+  .skill:hover .skill-image {
+    margin-bottom: 4rem;
+    transform: scale(1.05);
+  }
+
+  .skill-title {
+    font-size: 2.8rem;
+  }
+
+  .skill-text {
+    font-size: 2.4rem;
+  }
+
+  /* Techstack section */
+  .tech-img-box {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .tech {
+    width: 10rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+    filter: grayscale(0);
+  }
+  .tech:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0 14px var(--color-primary);
+  }
+
+  /* projects */
+  .projects-section .grid-3-cols {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .project-img-box {
+    flex: 0 0 auto;
+    height: auto;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .project-content {
+    padding: 2rem;
+  }
+
+  .project-title {
+    font-size: 2.4rem;
+  }
+
+  .project-subheading {
+    font-size: 2.2rem;
+  }
+
+  .project-description {
+    font-size: 2rem;
+  }
+  /* Certificates */
+  .slider {
+    width: 100%;
+    height: 30rem;
+  }
+  .slide {
+    height: 30rem;
+  }
+  .slider__btn {
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.8rem;
+  }
+  .dots__dot {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  /* contant modal */
+  .modal {
+    width: 80%;
+    padding: 4rem;
+    margin-bottom: 2.4rem;
+    font-size: 3rem;
+  }
+  .options {
+    padding: 1rem;
+    gap: 2rem;
+  }
+  .option-icon {
+    font-size: 3.6rem;
+    padding: 1.4rem;
+  }
+  /* /////////////////// */
+  /* Mobile Navigation */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1001; /* Ensure the button is on top of other content */
+  }
+
+  .navigation {
+    background-color: var(--color-bg-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    z-index: 1000;
+  }
+
+  /* Background Overlay */
+  .bg-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-overlay); /* Darken the background */
+    backdrop-filter: blur(5px);
+    z-index: 999; /* Lower than navigation but still above content */
+    display: none; /* Hidden by default */
+  }
+
+  .nav-open .bg-nav-overlay {
+    display: block; /* Display overlay when navigation is open */
+  }
+
+  .nav-open .navigation {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    z-index: 1000; /* Ensure navigation is above everything */
+    transform: translateX(0);
+  }
+
+  .nav-open .close-icon {
+    display: block;
+  }
+
+  .nav-open .menu-icon {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-link:after {
+    display: none;
+  }
+
+  .nav-link:visited,
+  .nav-link:link {
+    font-size: 3rem;
+  }
+
+  /* Sticky Navigation Fix */
+  .sticky .header {
+    z-index: 1000;
+  }
+
+  .slider,
+  .section {
+    z-index: 1;
+  }
+}

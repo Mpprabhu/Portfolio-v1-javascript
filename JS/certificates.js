@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(
         (cert) => `
       <div class="slide">
-        <img src="${cert}" alt="Certificate" class="c-img" />
+        <img src="${cert.url}" alt="${cert.title}" class="c-img" />
       </div>
     `
       )

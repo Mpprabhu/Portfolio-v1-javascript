@@ -1,5 +1,5 @@
 /* Mobile Layout */
-@import url("variables.css");
+@import url("../Components/variables.css");
 
 @media (max-width: 34em) {
   /* General */

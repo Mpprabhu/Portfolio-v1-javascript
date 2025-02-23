@@ -100,6 +100,21 @@
   .slide {
     height: 40rem;
   }
+  .modal {
+    width: 75%;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .github-btn {
+    font-size: 1.6rem;
+  }
+  .github-btn i {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
 }
 
 /* Tablet Smaller (Below 44em / 704px) */

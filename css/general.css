@@ -102,6 +102,10 @@ section {
   row-gap: 8rem;
 }
 
+.grid-full-scale {
+  grid-column: 1/-1;
+}
+
 /* Other Global Styles */
 .high-index {
   position: relative;

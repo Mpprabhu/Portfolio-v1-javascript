@@ -12,6 +12,7 @@
   /* Text Colors */
   --color-text-light: #ebebeb;
   --color-text-muted: #bbb;
+  --color-text-dark: #333;
 
   /* Shadows and Overlays */
   --color-box-shadow: rgba(0, 0, 0, 0.3);

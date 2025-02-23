@@ -256,6 +256,10 @@
     font-size: 3rem;
   }
 
+  .github-btn i {
+    padding: 1.4rem 0;
+  }
+
   /* Sticky Navigation Fix */
   .sticky .header {
     z-index: 1000;

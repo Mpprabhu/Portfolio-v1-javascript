@@ -88,6 +88,9 @@
               <a href="https://www.linkedin.com/in/prabhu-m-p/" class="other"
                 ><i class="ph ph-linkedin-logo"></i
               ></a>
+              <a href="mailto:prabhu92004@gmail.com" class="other"
+                ><i class="ph ph-envelope-simple"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -142,22 +145,41 @@
         collaborators, and anyone interested in my work. Feel free to reach out
         through Github or Linkedin.
       </p>
-      <div class="options">
-        <a
-          href="https://github.com/Mpprabhu?tab=overview&from=2024-07-01&to=2024-07-04"
-          class="option-icon"
-          ><i class="ph ph-github-logo"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/prabhu-m-p/" class="option-icon"
-          ><i class="ph ph-linkedin-logo"></i
-        ></a>
-        <a href="https://leetcode.com/u/mpprabhu/" class="option-icon"
-          ><i class="ph ph-code"></i
-        ></a>
-        <a href="mailto:prabhu92004@gmail.com" class="option-icon"
-          ><i class="ph ph-envelope-simple"></i
-        ></a>
-      </div>
+      <form class="cta-form" name="contact-form" netlify>
+        <div>
+          <label for="name">Enter your Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email">Enter your Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="E-mail"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="grid-full-scale">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Let's connect..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn-signup grid-full-scale">Sign up now</button>
+      </form>
     </div>
     <div class="overlay hidden"></div>
     <footer class="footer text-center">Copyright text</footer>

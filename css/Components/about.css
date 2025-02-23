@@ -123,6 +123,5 @@
 }
 
 .other:hover {
-  font-size: 3.8rem;
   color: var(--color-text-light);
 }

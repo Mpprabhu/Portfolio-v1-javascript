@@ -8,6 +8,7 @@
 # files
 data.js
 /img
+*.pdf
 
 # testing
 /coverage

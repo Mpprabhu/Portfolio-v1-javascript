@@ -20,6 +20,9 @@
   --color-shadow: rgba(0, 0, 0, 0.5);
   --color-overlay: rgba(0, 0, 0, 0.7);
 
+  /* Elements */
+  --color-blob: #a5d8ff;
+
   /* Modal */
   --color-modal-bg: #222;
 

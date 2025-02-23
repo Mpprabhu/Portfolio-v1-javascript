@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `
       )
       .join("");
-    // Append slider controls and dots container
     sliderContainer.innerHTML += `
       <button class="slider__btn slider__btn--left">
         <i class="ph ph-caret-left btn-icon"></i>

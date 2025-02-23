@@ -9,7 +9,6 @@ window.addEventListener("load", () => {
   let currentSlide = 0;
   const maxSlide = slides.length;
 
-  // Create dots for each slide with the correct class
   const createDots = () => {
     slides.forEach((_, i) => {
       dotContainer.insertAdjacentHTML(
@@ -19,7 +18,6 @@ window.addEventListener("load", () => {
     });
   };
 
-  // Update active dot styling
   const updateDots = (slide) => {
     dotContainer
       .querySelectorAll(".dots__dot")
@@ -29,7 +27,6 @@ window.addEventListener("load", () => {
       .classList.add("dots__dot--active");
   };
 
-  // Position slides side-by-side and update active dot
   const goToSlide = (slide) => {
     slides.forEach((s, i) => {
       s.style.transform = `translateX(${100 * (i - slide)}%)`;
@@ -37,33 +34,28 @@ window.addEventListener("load", () => {
     updateDots(slide);
   };
 
-  // Next slide functionality
   const nextSlide = () => {
     currentSlide = currentSlide === maxSlide - 1 ? 0 : currentSlide + 1;
     goToSlide(currentSlide);
   };
 
-  // Previous slide functionality
   const prevSlide = () => {
     currentSlide = currentSlide === 0 ? maxSlide - 1 : currentSlide - 1;
     goToSlide(currentSlide);
   };
 
-  // Auto slide functionality (change slide every 3 seconds)
   let autoSlideInterval = setInterval(nextSlide, 5000);
   const resetInterval = () => {
     clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(nextSlide, 5000);
   };
 
-  // Initialize slider: create dots then position slides
   const init = () => {
     createDots();
     goToSlide(0);
   };
   init();
 
-  // Event listeners for slider controls
   btnRight.addEventListener("click", () => {
     nextSlide();
     resetInterval();
@@ -74,7 +66,6 @@ window.addEventListener("load", () => {
     resetInterval();
   });
 
-  // Event listener for dots navigation using the updated class names
   dotContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("dots__dot")) {
       currentSlide = Number(e.target.dataset.slide);

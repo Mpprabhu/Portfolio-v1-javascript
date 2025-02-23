@@ -1,21 +1,17 @@
 @media (max-width: 84em) {
-  /* Example: Reduce header padding */
   .header {
     padding: 0 3.2rem;
   }
 
-  /* Slightly reduce navigation font sizes */
   .nav-link,
   .btn-contact {
     font-size: 1.6rem;
   }
 
-  /* Adjust About section padding */
   .about-section {
     padding: 4.8rem 7.2rem 7.2rem 7.2rem;
   }
 
-  /* Projects: Reduce gap between cards and let cards auto-size */
   .projects-section .grid-3-cols {
     gap: 4rem;
   }
@@ -25,10 +21,10 @@
     margin-bottom: 2rem;
   }
 
-  /* Slider: Slightly reduce height */
   .slider {
     height: 60rem;
   }
+
   .slide {
     height: 60rem;
   }
